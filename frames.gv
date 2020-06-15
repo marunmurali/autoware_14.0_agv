@@ -1,0 +1,10 @@
+digraph G {
+"world" -> "map"[label=" Broadcaster: /world_to_map\nAverage rate: 97.585\nBuffer length: 4.991\nMost recent transform: 1591780627.42\nOldest transform: 1591780622.43\n"];
+"base_link" -> "base_odom"[label=" Broadcaster: /base_link_to_base_odom\nAverage rate: 97.585\nBuffer length: 4.991\nMost recent transform: 1591780627.42\nOldest transform: 1591780622.43\n"];
+"map" -> "base_link"[label=" Broadcaster: /ndt_matching\nAverage rate: 10.121\nBuffer length: 4.841\nMost recent transform: 1591780627.32\nOldest transform: 1591780622.48\n"];
+"base_link" -> "velodyne"[label=" Broadcaster: /base_link_to_localizer\nAverage rate: 97.585\nBuffer length: 4.991\nMost recent transform: 1591780627.42\nOldest transform: 1591780622.43\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1591780627.42"[ shape=plaintext ] ;
+}->"world";
+}
